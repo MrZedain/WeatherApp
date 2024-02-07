@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResultsPage</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Main CSS file -->
+    <link rel="stylesheet" type="text/css" href="/resultpage.css">
+    <!-- Weather Icons -->
+    <link rel="stylesheet" href="icons/weather-icons.min.css">
+
+</head>
+
+<body>
+
+    <!-- Loading screen -->
+    <div id="preloader"></div>
+
+
+
+
+    <!----------NAV BAR--------->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navDiv">
+            <div class="logo"><span class="navbar-brand mb-0 h1"><a href="/home.html"> <i
+                            class="wi wi-day-storm-showers"> WeatherApp</a></i></span>
+            </div>
+            <div class="inputDiv">
+                <label for="cityInput"></label>
+                <input id="cityInput" type="text" class="rounded" required placeholder="Enter a city..." required>
+                <label for="countryInput"></label>
+                <input id="countryInput" type="text" class="rounded" required placeholder="Enter a country..." required>
+                <button id="submitBtn" type="submit" class="rounded-circle" id="submit"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+    <!--------------------------->
+
+
+
+
+
+
+<!----------------------------------------------ALL CONTENT CONTAINER-------------------------------------------------->
+    <div class="contentWrap">
+
+       
+       
+
+
+        <!--------------------------TODAYS DATA---------------------------------->
+
+        <div class="current">
+            <h1 class="heading">Today's outlook</h1>
+            
+
+
+            <!-------CURRENT DATA------------>
+            <div class="container now">
+                
+                <div class="currentWeather"></div>
+                <div class="locationANDtime"></div>
+                <div class="date"></div>
+                <div class="extraInfo"></div>
+                <div class="sun">
+                    <div class="rise"></div>
+                    <div class="set"></div>
+                </div>
+                <hr class="separator2">
+
+            </div>
+            <!------------------------------>
+
+
+
+
+
+            <!-------HOURLY DATA------->
+            <div class="hourlyWrap">
+            
+                <!-- scroll up -->
+                <button id="backBtn1" class="hourlyButton rounded-circle"><i class="fa fa-arrow-up"aria-hidden="true"></i></button>
+                <div class="hourly">
+
+                    <!--HOUR CARDS INJECTED HERE-->
+
+                </div>
+                <!-- scroll down -->
+                <button id="nextBtn1" class="hourlyButton rounded-circle"><i class="fa fa-arrow-down button"aria-hidden="true"></i></button>
+                
+                
+            </div>
+            <!------------------------->
+
+
+
+
+
+        </div>
+       <!------------------------END TODAYS DATA ------------------------------>
+
+
+
+
+
+
+
+       <!-------------------------REST OF WEEK DATA------------------------------>
+
+        <div class="dailyWrap">
+            
+            <h1 class="heading"><i class="fa-solid fa-calendar-week"></i> The week ahead</h1>
+            
+            <!-- scroll up -->
+            <button id="backBtn2" class="dailyButton rounded-circle">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            </button>
+            
+           
+            <div class="daily">
+
+                <!--DAY CARDS INJECTED HERE-->
+
+            </div>
+
+
+            <!-- scroll down -->
+            <button id="nextBtn2" class="dailyButton rounded-circle">
+                <i class="fa fa-arrow-down button"></i>
+            </button>
+                
+        </div>
+        <!-------------------------END REST OF WEEK DATA-------------------------->
+
+
+
+
+        
+
+    </div>
+    <!-------------------------------END ALL CONTENT CONTAINER --------------------------------------------------------------->
+
+
+
+    <script type="module" src="/resultpage.js"></script>
+    <script src="https://kit.fontawesome.com/a51c1da5a5.js" crossorigin="anonymous"></script>
+    <script>
+        var loader = document.getElementById("preloader");
+
+        // Function to hide the preloader after a delay
+        function hidePreloaderWithDelay() {
+            setTimeout(() => {
+                loader.style.opacity = "0"; // Change opacity gradually
+                setTimeout(() => {
+                    loader.style.display = "none"; // Hide preloader after transition
+                }, 500); // Adjust duration to match CSS transition duration
+            }, 2000); // Adjust the delay time as needed
+        }
+
+        // Execute hide loading screen function on page load
+        window.addEventListener("load", hidePreloaderWithDelay);
+
+</script>
+
+    <!-- SweetAlert2 JavaScript (error popups)-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+
+</html>

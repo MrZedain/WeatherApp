@@ -1,0 +1,31 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Clutter free weather application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrZedain/WeatherApp.git"
+  },
+  "author": "Zain Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrZedain/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/MrZedain/WeatherApp#readme",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.44"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

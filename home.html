@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Weather Icons -->
+  <link rel="stylesheet" href="icons/weather-icons.min.css">
+  <style>
+    /* Loading screen */
+    #preloader {
+      background: rgba(8, 24, 41, 255) url(icons/earthloader.gif) no-repeat center center;
+      background-size: 15%;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      transition: opacity 0.5s ease;
+    }
+
+    body {
+      height: 100vh;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      background-image: url("homeWallpaper.svg");
+      background-size: cover;
+      color: #f7f7f7;
+
+    }
+
+    .wi {
+      font-size: xx-large;
+      margin-bottom: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Input styles */
+    .inp {
+      position: relative;
+      width: 100%;
+      margin-bottom: 5px;
+      max-width: 280px;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    /* Label styles for input */
+    /* Positioned label with transition effect */
+    .inp .label {
+      position: absolute;
+      top: 20px;
+      left: 12px;
+      font-size: 16px;
+      color: rgba(247, 255, 251, 0.897);
+      font-weight: 500;
+      transform-origin: 0 0;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.2s ease;
+      pointer-events: none;
+    }
+
+    /* Background for focused input */
+    .inp .focus-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.05);
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    /* Input field styles */
+    .inp input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100%;
+      border: 0;
+      font-family: inherit;
+      padding: 16px 12px 0 12px;
+      height: 56px;
+      font-size: 16px;
+      font-weight: 400;
+      background: rgba(0, 0, 0, 0.02);
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+      color: #f7f7f7;
+      transition: all 0.15s ease;
+    }
+
+    /* Hover styles for input */
+    .inp input:hover {
+      background: rgba(0, 0, 0, 0.04);
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    }
+
+
+   /* Label appearance when input is focused or has content */
+    .inp input:not(:-moz-placeholder-shown)+.label {
+      color: rgba(0, 0, 0, 0.5);
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    .inp input:not(:-ms-input-placeholder)+.label {
+      color: rgba(0, 0, 0, 0.5);
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+    .inp input:not(:placeholder-shown)+.label {
+      color: rgba(0, 0, 0, 0.5);
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+
+
+    /* Input focus styles */
+    .inp input:focus {
+      background: rgba(0, 0, 0, 0.05);
+      outline: none;
+      box-shadow: inset 0 -2px 0 #3407ff;
+    }
+
+    /* Label styles when input is focused */
+    .inp input:focus+.label {
+      color: #969a9e;
+      transform: translate3d(0, -12px, 0) scale(0.75);
+    }
+
+    /* Background animation for focused input */
+    .inp input:focus+.label+.focus-bg {
+      transform: scaleX(1);
+      transition: all 0.1s ease;
+    }
+
+
+    
+    .inputDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      ;
+    }
+
+    button {
+      background-color: #3407ff00;
+      border-color: rgba(0, 0, 0, 0);
+      color: rgb(240, 248, 255);
+    }
+
+    button:hover {
+      color: #21117a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading screen -->
+  <div id="preloader"></div>
+
+
+  <!------------Container for logo app name and user inputs------------->
+  <div class="inputDiv">
+    <i class="wi wi-day-storm-showers"></i>
+    <h1>WeatherApp</h1>
+
+    <label for="cityInput" class="inp">
+      <input type="text" id="cityInput" placeholder="&nbsp;">
+
+      <span class="label">City</span>
+      <span class="focus-bg"></span>
+
+    </label>
+    <label for="countryInput" class="inp">
+
+      <input type="text" id="countryInput" placeholder="&nbsp;">
+      <span class="label">Country</span>
+      <span class="focus-bg"></span>
+
+    </label>
+    <button id="submitBtn" type="submit" class="rounded-circle" id="submit"><i class="fas fa-search"></i></button>
+  </div>
+  <!-------------------------------------------------------------------->
+
+
+  <!-- Font awesome icons -->
+  <script src="https://kit.fontawesome.com/a51c1da5a5.js" crossorigin="anonymous"></script>
+  <!-- JavaScript file -->
+  <script src="/home.js"></script>
+  <!-- SweetAlert2 JavaScript (error popups)-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+</body>
+
+</html>
