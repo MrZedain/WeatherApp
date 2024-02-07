@@ -13,9 +13,9 @@ Step 2: download and install Node.js on your system (version 20.11.0 LTS at the 
 
 Step 3: Download the project ZIP from the repository by clicking on the "<> code" button and selecting "Download ZIP " from the dropdown menu
 
-Step 4: Extract contents of ZIP and open folder in VS code
+Step 4: Extract contents of ZIP and open extracted folder in VS code
 
-Step 5: in the terminal run the following comman "npm install" to install all necessary dependencies
+Step 5: in the terminal run the following command "npm install" to install all necessary dependencies
 
 
 API KEY Step: You will need to aqcuire a free API key from https://positionstack.com 
