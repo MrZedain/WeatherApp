@@ -6,8 +6,6 @@ In order to run this project on your system, you will need to install
 Node.js and Node Package manager (npm) on your system. Downloading and installing Node.js should be sufficient as it comes bundled with npm.
 
 API KEY: You will need to aqcuire a free API key from https://positionstack.com 
-Upon receiving your key, create a file named .env within the project folder. 
-Then 
 
 
 INSTALL INSTRUCTIONS:
