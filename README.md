@@ -25,4 +25,4 @@ Step 6: in the terminal run the following command "node ." while in the root of 
 
 Step 7: Once "Application is running on port 3034" is seen in the terminal enter "http://localhost:3034/home" into your browser
 
-Step 8: The app should now be working! Type in a valid City and country and hit the search icon!
+Step 8: The app should now be working! Type in a valid City and Country and hit the search icon!
