@@ -21,7 +21,7 @@ Step 4: in the terminal/command prompt run the following command "npm install" t
 
 Step 5: Create a file in the root of the project called .env and paste "POSITIONSTACK_API_KEY = YOUR-API-KEY-HERE" into the file, without the surrounding quotations. You may also define a port value "PORT = ____" if port 3034 is not availible.
 
-Step 6: in the terminal/command promp run the following command "node ." while in the root of the project to execute index.js file, and start running the local server on PORT 3034
+Step 6: in the terminal run the following command "node ." while in the root of the project to execute index.js file, and start running the local server on PORT 3034
 
 Step 7: Once "Application is running on port 3034" is seen in the terminal of VS code enter "http://localhost:3034/home" into your browser
 
