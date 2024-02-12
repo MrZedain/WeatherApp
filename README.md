@@ -23,6 +23,6 @@ Step 5: Create a file in the root of the project called .env and paste "POSITION
 
 Step 6: in the terminal run the following command "node ." while in the root of the project to execute index.js file, and start running the local server on PORT 3034
 
-Step 7: Once "Application is running on port 3034" is seen in the terminal of VS code enter "http://localhost:3034/home" into your browser
+Step 7: Once "Application is running on port 3034" is seen in the terminal enter "http://localhost:3034/home" into your browser
 
 Step 8: The app should now be working! Type in a valid City and country and hit the search icon!
